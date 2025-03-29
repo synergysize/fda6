@@ -9,19 +9,10 @@
 </head>
 <body>
     <header>
-        <div class="usa-banner">
-            <div class="usa-banner-inner">
-                <div class="grid-container">
-                    <div class="usa-banner-content">
-                        <p>An official website of the United States government</p>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="header-main">
             <div class="grid-container">
                 <div class="logo">
-                    <img src="https://placehold.co/50x50?text=DOGE" alt="DOGE Logo">
+                    <img src="logo.jpg" alt="DOGE Logo">
                     <div class="title">
                         <h1>Department of Government Efficiency</h1>
                         <h2>DOGE.gov</h2>
@@ -29,11 +20,10 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Efficiency Initiatives</a></li>
-                        <li><a href="#">Savings Dashboard</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="https://deptofgovernmentefficiency.info">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#notifications">Notifications</a></li>
+                        <li><a href="https://doge.gov">DOGE.gov</a></li>
                     </ul>
                 </nav>
             </div>
@@ -64,26 +54,28 @@
                 </div>
             </div>
 
-            <div class="info-section">
+            <div class="info-section" id="about">
                 <h3>About DOGE Initiatives</h3>
                 <p>The Department of Government Efficiency (DOGE) identifies and eliminates wasteful spending across federal agencies. Our mission is to improve government operations, cut unnecessary costs, and ensure taxpayer dollars are spent effectively.</p>
                 <p>This chatbot provides information about our top efficiency initiatives. You can ask questions about specific agencies, programs, savings achieved, and ongoing efforts.</p>
                 <p>Data last updated: March 27, 2025</p>
             </div>
+
+            <div class="info-section" id="notifications">
+                <h3>Get Notifications</h3>
+                <p>Sign up below to receive updates about efficiency initiatives:</p>
+                <form id="emailForm">
+                    <input type="email" id="emailInput" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
         </div>
     </main>
 
     <footer>
         <div class="grid-container">
             <div class="footer-content">
-                <div class="footer-links">
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Accessibility</a></li>
-                        <li><a href="#">FOIA</a></li>
-                        <li><a href="#">No Fear Act</a></li>
-                    </ul>
-                </div>
                 <div class="footer-info">
                     <p>&copy; 2025 Department of Government Efficiency. All rights reserved.</p>
                 </div>
@@ -92,5 +84,18 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailPattern.test(email)) {
+                alert('Thanks for subscribing! You will now receive updates.');
+                document.getElementById('emailInput').value = '';
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+    </script>
 </body>
 </html>
