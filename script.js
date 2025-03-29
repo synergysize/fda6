@@ -622,8 +622,3 @@ userInput.addEventListener('keypress', (event) => {
         sendButton.click();
     }
 });
-
-// Focus on input field when page loads
-window.addEventListener('load', () => {
-    userInput.focus();
-});
