@@ -3,99 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOGE.gov - Department of Government Efficiency</title>
+    <title>DOGE.gov</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .header-main {
+            padding: 20px 0;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-main img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            padding: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #003366;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="header-main">
-            <div class="grid-container">
-                <div class="logo">
-                    <img src="logo.jpg" alt="DOGE Logo">
-                    <div class="title">
-                        <h1>Department of Government Efficiency</h1>
-                        <h2>DOGE.gov</h2>
+
+<header>
+    <div class="header-main">
+        <img src="image.png" alt="DOGE Logo">
+        <nav>
+            <ul>
+                <li><a href="https://deptofgovernmentefficiency.info">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#notifications">Notifications</a></li>
+                <li><a href="https://doge.gov">DOGE.gov</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="grid-container">
+        <div class="hero">
+            <h2>Government Efficiency Portal</h2>
+            <p>Discover how DOGE is cutting wasteful spending and saving taxpayer dollars across federal agencies.</p>
+        </div>
+
+        <div class="chatbot-container">
+            <div class="chatbot-header">
+                <h3><i class="fas fa-robot"></i> Agent DOGE — Integrated with DOGE's new API</h3>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <div class="message-content">
+                        <p>Welcome! Would you like more information about government efficiency initiatives, or perhaps you'd like the contract address?</p>
                     </div>
                 </div>
-                <nav>
-                    <ul>
-                        <li><a href="https://deptofgovernmentefficiency.info">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#notifications">Notifications</a></li>
-                        <li><a href="https://doge.gov">DOGE.gov</a></li>
-                    </ul>
-                </nav>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Ask Agent DOGE...">
+                <button id="sendButton"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
-    </header>
 
-    <main>
-        <div class="grid-container">
-            <div class="hero">
-                <h2>Government Efficiency Portal</h2>
-                <p>Discover how we're cutting wasteful spending and saving taxpayer dollars across federal agencies.</p>
-            </div>
-
-            <div class="chatbot-container">
-                <div class="chatbot-header">
-                    <h3><i class="fas fa-robot"></i> DOGE Efficiency Assistant</h3>
-                </div>
-                <div class="chat-messages" id="chatMessages">
-                    <div class="message bot">
-                        <div class="message-content">
-                            <p>Welcome to the DOGE Efficiency Assistant. I can provide information about how we're cutting wasteful spending across government agencies. How can I help you today?</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="chat-input">
-                    <input type="text" id="userInput" placeholder="Ask about our efficiency initiatives...">
-                    <button id="sendButton"><i class="fas fa-paper-plane"></i></button>
-                </div>
-            </div>
-
-            <div class="info-section" id="about">
-                <h3>About DOGE Initiatives</h3>
-                <p>The Department of Government Efficiency (DOGE) identifies and eliminates wasteful spending across federal agencies. Our mission is to improve government operations, cut unnecessary costs, and ensure taxpayer dollars are spent effectively.</p>
-                <p>This chatbot provides information about our top efficiency initiatives. You can ask questions about specific agencies, programs, savings achieved, and ongoing efforts.</p>
-                <p>Data last updated: March 27, 2025</p>
-            </div>
-
-            <div class="info-section" id="notifications">
-                <h3>Get Notifications</h3>
-                <p>Sign up below to receive updates about efficiency initiatives:</p>
-                <form id="emailForm">
-                    <input type="email" id="emailInput" placeholder="Your email address">
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
-
+        <div class="info-section" id="about">
+            <h3>About DOGE Initiatives</h3>
+            <p>The Department of Government Efficiency (DOGE) identifies and eliminates wasteful spending across federal agencies. DOGE's mission is to improve government operations, cut unnecessary costs, and ensure taxpayer dollars are spent effectively.</p>
+            <p>This chatbot provides information about DOGE's top efficiency initiatives. You can ask questions about specific agencies, programs, savings achieved, and ongoing efforts.</p>
+            <p>Data last updated: March 27, 2025</p>
         </div>
-    </main>
 
-    <footer>
-        <div class="grid-container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <p>&copy; 2025 Department of Government Efficiency. All rights reserved.</p>
-                </div>
+        <div class="info-section" id="notifications">
+            <h3>Get Notifications</h3>
+            <p>Sign up below to receive updates about DOGE's efficiency initiatives:</p>
+            <form id="emailForm">
+                <input type="email" id="emailInput" placeholder="Your email address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <div class="grid-container">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 Department of Government Efficiency. All rights reserved.</p>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="script.js"></script>
-    <script>
-        document.getElementById('emailForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = document.getElementById('emailInput').value;
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (emailPattern.test(email)) {
-                alert('Thanks for subscribing! You will now receive updates.');
-                document.getElementById('emailInput').value = '';
-            } else {
-                alert('Please enter a valid email address.');
-            }
-        });
-    </script>
+<script src="script.js"></script>
+<script>
+    document.getElementById('emailForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = document.getElementById('emailInput').value;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailPattern.test(email)) {
+            alert('Thanks for subscribing! DOGE will send you updates.');
+            document.getElementById('emailInput').value = '';
+        } else {
+            alert('Please enter a valid email address.');
+        }
+    });
+</script>
+
 </body>
 </html>
