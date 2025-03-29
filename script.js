@@ -136,7 +136,7 @@ function addMessage(message, isUser = false) {
 }
 
 // API configuration for OpenAI connection
-const API_KEY = "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";
+const API_KEY = "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";
 // Connect to the OpenAI API endpoint
 const API_URL = "https://api.openai.com";
 
