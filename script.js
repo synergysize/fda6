@@ -136,7 +136,7 @@ function addMessage(message, isUser = false) {
 }
 
 // API configuration for OpenAI connection
-const API_KEY = "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";
+const API_KEY = process.env.OPENAI_API_KEY;
 // Connect to the OpenAI API endpoint
 const API_URL = "https://api.openai.com";
 
@@ -156,7 +156,7 @@ window.addEventListener('DOMContentLoaded', () => {
     startupIndicator.style.borderRadius = '20px';
     startupIndicator.style.fontSize = '14px';
     startupIndicator.style.zIndex = '1000';
-    startupIndicator.textContent = "🔌 AI Ready: Connected to OpenAI";
+    startupIndicator.textContent = "🟢 Connected";
     document.body.appendChild(startupIndicator);
     
     // Remove after 5 seconds
