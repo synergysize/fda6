@@ -203,13 +203,7 @@ function fallbackBotResponse(input) {
 
   if (lowercaseInput.includes('largest') || lowercaseInput.includes('biggest') || lowercaseInput.includes('most wasteful')) {
     const largest = initiatives.sort((a, b) => b.wasteful_spending - a.wasteful_spending)[0];
-    return25",
-"agency": "Department of Defense",
-        "program": "Legacy IT Systems Modernization",
-        "wasteful_spending": 4200000000,
-        "savings": 2850000000,
-        "status": "Completed",
-    
+    return `The largest wasteful spending identified was ${formatCurrency(largest.wasteful_spending)} in the "${largest.program}" program at the ${largest.agency}. Savings achieved: ${formatCurrency(largest.savings)}.`;
   }
   // (Additional fallback cases as in your original code...)
   return "I'm not sure I understand your question. Please ask about wasteful spending, efficiency initiatives, or specific programs.";
@@ -259,7 +253,7 @@ sendButton.addEventListener('click', async () => {
     const endTime = new Date();
     const responseTime = (endTime - startTime) / 1000;
     statusIndicator.style.backgroundColor = '#008000';
-    statusIndicator.textContent =ification systems to prevent improper subsidy
+    statusIndicator.textContent = `✅ Connected (${responseTime.toFixed(1)}s)`;
     setTimeout(() => statusIndicator.remove(), 5000);
     clearInterval(thinkingInterval);
     document.getElementById('typingIndicator').remove();
