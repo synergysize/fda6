@@ -1,145 +1,130 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First DOGE Agent -- $FDA</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        .header-main {
-            padding: 20px 0;
-            background-color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-.header-main img {
-    height: 250px; /* set to desired height */
-    width: auto; /* maintains aspect ratio */
-}
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 15px;
-            padding: 10px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #003366;
-            font-weight: bold;
-            font-size: 1rem;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            padding: 20px 0;
-            background-color: #323a45;
-            color: white;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        footer a {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>First DOGE Agent -- $FDA</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    .header-main {
+      padding: 20px 0;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .header-main img {
+      height: 250px;
+      width: auto;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      padding: 10px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #003366;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      padding: 20px 0;
+      background-color: #323a45;
+      color: white;
+      text-align: center;
+      margin-top: 20px;
+    }
+    footer a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-
-<header>
+  <header>
     <div class="header-main">
-        <img src="logo.jpg" alt="DOGE Logo">
-        <nav>
-            <ul>
-                <li><a href="https://deptofgovernmentefficiency.info">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#notifications">Notifications</a></li>
-                <li><a href="https://doge.gov">DOGE.gov</a></li>
-            </ul>
-        </nav>
+      <img src="logo.jpg" alt="DOGE Logo" />
+      <nav>
+        <ul>
+          <li><a href="https://deptofgovernmentefficiency.info">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#notifications">Notifications</a></li>
+          <li><a href="https://doge.gov">DOGE.gov</a></li>
+        </ul>
+      </nav>
     </div>
-</header>
+  </header>
 
-<main>
+  <main>
     <div class="grid-container">
-        <div class="hero">
-            <h2>Government Efficiency Portal</h2>
-            <p>Discover how DOGE is cutting wasteful spending and saving taxpayer dollars across federal agencies with our new DOGE agent, the first agent with access to data from within DOGE's API.</p>
-        </div>
+      <div class="hero">
+        <h2>Government Efficiency Portal</h2>
+        <p>
+          Discover how DOGE is cutting wasteful spending and saving taxpayer dollars across federal agencies with our new DOGE agent, the first agent with access to data from within DOGE's API.
+        </p>
+      </div>
 
-        <div class="chatbot-container">
-            <div class="chatbot-header">
-                <h3><i class="fas fa-robot"></i> First DOGE Agent </h3>
+      <div class="chatbot-container">
+        <div class="chatbot-header">
+          <h3><i class="fas fa-robot"></i> First DOGE Agent</h3>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <div class="message bot">
+            <div class="message-content">
+              <p>
+                Welcome! Would you like more information about government efficiency initiatives? I periodically crawl this API for new updates, so please subscribe to our notifications below!
+              </p>
             </div>
-            <div class="chat-messages" id="chatMessages">
-                <div class="message bot">
-                    <div class="message-content">
-                        <p>Welcome! Would you like more information about government efficiency initiatives?  I periodically crawl this API for new updates, so please subscribe to our notifications below!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="chat-input">
-                <input type="text" id="userInput" placeholder="Ask Agent DOGE...">
-                <button id="sendButton"><i class="fas fa-paper-plane"></i></button>
-            </div>
+          </div>
         </div>
-
-        <div class="info-section" id="about">
-            <h3>About DOGE Initiatives</h3>
-            <p>The Department of Government Efficiency (DOGE) identifies and eliminates wasteful spending across federal agencies. DOGE's mission is to improve government operations, cut unnecessary costs, and ensure taxpayer dollars are spent effectively.</p>
-            <p>This chatbot provides information about DOGE's top efficiency initiatives. You can ask questions about specific agencies, programs, savings achieved, and ongoing efforts.</p>
-            <p>Data last updated: March 27, 2025</p>
+        <div class="chat-input">
+          <input type="text" id="userInput" placeholder="Ask Agent DOGE..." />
+          <button id="sendButton"><i class="fas fa-paper-plane"></i></button>
         </div>
+      </div>
 
-        <div class="info-section" id="notifications">
-            <h3>Get Notifications</h3>
-            <p>Sign up below to receive updates about DOGE's efficiency initiatives:</p>
-            <form id="emailForm">
-                <input type="email" id="emailInput" placeholder="Your email address">
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
+      <div class="info-section" id="about">
+        <h3>About DOGE Initiatives</h3>
+        <p>
+          The Department of Government Efficiency (DOGE) identifies and eliminates wasteful spending across federal agencies. DOGE's mission is to improve government operations, cut unnecessary costs, and ensure taxpayer dollars are spent effectively.
+        </p>
+        <p>
+          This chatbot provides information about DOGE's top efficiency initiatives. You can ask questions about specific agencies, programs, savings achieved, and ongoing efforts.
+        </p>
+        <p>Data last updated: March 27, 2025</p>
+      </div>
 
+      <div class="info-section" id="notifications">
+        <h3>Get Notifications</h3>
+        <p>Sign up below to receive updates about DOGE's efficiency initiatives:</p>
+        <form id="emailForm">
+          <input type="email" id="emailInput" placeholder="Your email address" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
     </div>
-</main>
+  </main>
 
-<footer>
+  <footer>
     <a href="https://deptofgovernmentefficiency.info">Home</a>
     <a href="#about">About</a>
     <a href="#notifications">Notifications</a>
     <a href="https://doge.gov">DOGE.gov</a>
-    <p>Official Contract Address: </p>
-</footer>
+    <p>Official Contract Address:</p>
+  </footer>
 
-<script src="script.js"></script>
-<script>
-    document.getElementById('emailForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const email = document.getElementById('emailInput').value;
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (emailPattern.test(email)) {
-            alert('Thanks for subscribing! DOGE will send you updates.');
-            document.getElementById('emailInput').value = '';
-        } else {
-            alert('Please enter a valid email address.');
-        }
-    });
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
+
